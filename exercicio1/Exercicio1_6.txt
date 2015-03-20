@@ -1,0 +1,4 @@
+EXERCICIO 6
+	No uso do INT, a parte decimal NAO constou na resposta, apenas a parte inteira.Como no caso da divisão 45/20/3, dá 0.75, mas será impresso na tela apenas o numero 0.
+	No uso do FLOAT, a parte decimal CONSTA na resposta, como é o caso da divisão, que será impresso na tela 0.75 
+	No uso do DOUBLE, a parte decimal CONSTA na resposta, porém a diferença para o FLOAT é quando precisa-se de um nível de exaidão maior.Também aparece 0.75
