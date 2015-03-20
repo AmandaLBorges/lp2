@@ -1,0 +1,10 @@
+EXERCICIO 8
+
+1) Há um erro no (;) depois do if.
+
+	if ( c < 7);   // RESOLUCAO  if ( c < 7)
+	
+
+2) Há um erro na condicao =>.
+
+	 if ( c => 7 ) // RESOLUCAO if ( c >= 7 )
