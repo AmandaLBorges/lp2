@@ -1,0 +1,13 @@
+  7
+	10.5
+	10.0
+	Variavel 4 é maior que 10.0
+	Variavel 5 é menor igual a 10.0
+	
+	
+	Operacao (int), com resultado inteiro 21/3 = 7
+	Operacao (float), com resultado float. A parte decimal é impressa na tela.
+	Operacao (float), com resultado inteiro.A variável que guarda o resultado é float, mas a o tipo da realizaçao da operacao nãoo foi especificado.
+
+	A variável4 é maior que 10, pois o resultado é 10.5 
+	A variável5 é menor igual a 10, pois o resultado é 10.0
