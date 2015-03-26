@@ -1,0 +1,12 @@
+Exercicio2_1 : 
+
+Tipo Abstrato de Dados : É um conjunto de dados bem definidos,onde são encapsulados os atributos para realizar as operações. Podem ser manipulados se forem bem definidos.
+
+Classe : É um tipo abstrato de dados, ou seja, uma, uma classe pode ser definida como uma abstração do mundo real onde encapsula-se os atributos e realiza-se as operações.
+ >> Outra definição pode ser caracterizada como um conceito estático que representa um modelo abstrato e possui atributos (variáveis) ou campos e operações (métodos).
+
+Objeto: É a instância de uma classe, alocando-se um espaço de memória para o objeto.
+>> Outra definição mais simplícita é tudo que existe no mundo real.
+Um objeto é armazena estados através de seus atributos e reage a mensagens enviadas para ele.
+
+Mensagem : Quando os objetos se comunicam entre si.
