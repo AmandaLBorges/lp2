@@ -1,80 +1,92 @@
 
-package numeromuitogrande;
-
 import java.util.Scanner;
 
-public class NumeroBig {
-  
-        Scanner input = new Scanner(System.in);
-        String n1;
-        String n2;
-        int i, j;
-        int aux1;
-        int aux2;
-        int soma[] = new int[30];
-        int multiplica[] = new int[30];
-        int x[] = new int[30];
-        int y[] = new int[30];
+public class BigInt {
 
-        public void lerVetor(){
-        System.out.print("Primeiro Número: ");
-        n1 = input.next();
-        System.out.print("Segundo Número: ");
-        n2 = input.next();
-    
-        for (i = n1.length(), j = 0; i > 0; i--, j++) {
-            char caracter = n1.charAt(j);
-            x[i] = Character.getNumericValue(caracter);
+    int x[] = new int[30];
+    int y[] = new int[30];
+    int somar[] = new int[30];
+    int multiplicar[] = new int[30];
+
+    public void ler() {
+        Scanner imput = new Scanner(System.in);
+        System.out.println("Primeiro numero: ");
+        String a = imput.next();
+        int quantidade = a.length() - 1;
+        int contador = 29;
+        while quantidade>= 0) {
+            this.x[contador] = Character.getNumericValue(a.charAt(quantidade));
+            contador--;
+            quantidade--;
         }
-        for (i = n2.length(), j = 0; i > 0; i--, j++) {
-            char caracter = n2.charAt(j);
-            y[i] = Character.getNumericValue(caracter);
+
+        System.out.println("Segundo numero: ");
+        String b = imput.next();
+
+        tamanho = b.length() - 1;
+        contador = 29;
+        while (quantidade >= 0) {
+            this.y[i] = Character.getNumericValue(b.charAt(quantidade));
+            contador--;
+            quantidade--;
         }
-       }
-        
-        public void somarVetor(){
-          for (i = 29; i >= 0; i--) {
-            soma[i] += (x[i] + y[i] + aux1) %10;
-            aux1 = (x[i] + y[i] + aux1)/10;
-            
-            }
-        System.out.print("Soma: "); 
-        int k;
-        for (k = 29; k >= 0; k--) {
-            if (soma[k] > 0) {
-                System.out.print(soma[k]);
-            }
+
+    }
+
+    public void soma() {
+
+        int aux1= 0;
+        for (int i = 29; i >= 0; i--) {
+            this.somar[i] = (this.x[i] + this.y[i] + aux1+ this.somar[i]) % 10;
+            sobe = (this.x[i] + this.y[i] + aux1) / 10;
         }
-      }
- 
-        public void multiplicarVetor(){
+    }
+
+    public void escreveSoma() {
+        for (int i = 0; i <= 29; i++) {
+            System.out.print(this.somar[i]);
+        }
+        System.out.println("");
+    }
+
+    public void multiplica() {
 
         for (int i = 29; i >= 0; i--) {
-            int aux1 = 0;
-            int aux2 = i;
+            int aux2 = 0;
+            int k = i;
             int j = 29;
-            while((j>=0) && (aux2>=0)){
-            multiplica[aux2] = multiplica[aux2] + (((x[j] * y[i]) + aux1) % 10);
-            aux1 = (((x[j] * y[i]) + aux1)  / 10);
-            aux2--;
+            while((j>=0) && (k>=0)){
+            this.multiplicar[k] = this.multiplicar[k] + (((this.x[j] * this.y[i]) + aux2) % 10);
+            aux2 = (((this.x[j] * this.y[i]) + aux2) / 10);
+            k--;
             j--;
             }
         }
-        int aux3 = 0;
+        int aux1 = 0;
+        int i;
         for (i = 29; i >= 0; i--) {
-           aux3 = multiplica[i]/10;
-           multiplica[i] = ((multiplica[i] + aux3)%10);
-        }                 
-        System.out.print("Multiplicacao: ");
-        int k;
-         for (k = 0; k <=29; k++) {
-                System.out.print(multiplica[k]);
-                }
-            }
+           aux1 = this.multiplicar[i]/10;
+           this.multiplicar[i] = ((this.multiplicar[i] + aux1)%10);
+            
+            
+          
+        }
+    }
 
-public static void main(String[] args) {
-    NumeroBig amanda = new NumeroBig();
-    amanda.lerVetor();
-    amanda.somarVetor();
-    amanda.multiplicarVetor();
-    }   
+    public void escreveMultiplicacao() {
+        for (int i = 0; i <= 29; i++) {
+            System.out.print(this.multiplicar[i]);
+        }
+        System.out.println("");
+    }
+
+    public static void main(String[] args) {
+        BigInt amanda= new BigInt();
+        amanda.ler();
+        amanda.soma();
+	      amanda.multiplica();
+        amanda.escreveSoma();
+        amanda.escreveMultiplicacao();
+
+    }
+}
