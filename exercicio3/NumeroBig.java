@@ -17,7 +17,7 @@ public class NumeroBig {
         int y[] = new int[30];
 
         public void lerVetor(){
-        System.out.print("Primeiro Númer: ");
+        System.out.print("Primeiro Número: ");
         n1 = input.next();
         System.out.print("Segundo Número: ");
         n2 = input.next();
